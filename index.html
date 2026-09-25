@@ -31,12 +31,20 @@
     .institution { margin:.25rem 0 0; color:var(--muted); }
     .profile-links { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; margin-top:1.5rem; }
     .profile-links a { font-size:.94rem; font-weight:550; }
+    .about { max-width:42rem; margin:0; font-size:1.03rem; }
     section { border-top:1px solid var(--line); padding:2.4rem 0 2.7rem; }
     h2 { margin:0 0 1.4rem; color:var(--ink); font-size:1.42rem; line-height:1.2; font-weight:700; letter-spacing:-.025em; }
     .topics { list-style:none; margin:0; padding:0; }
     .topic { display:grid; grid-template-columns:minmax(180px,.44fr) minmax(0,1fr); gap:1rem; padding:.75rem 0; }
     .topic h3 { color:var(--ink); margin:0; font-size:1rem; line-height:1.5; font-weight:650; }
     .topic p { margin:0; color:var(--muted); font-size:.96rem; line-height:1.55; }
+    .experience-group { margin:0 0 1.35rem; }
+    .experience-group:last-child { margin-bottom:0; }
+    .experience-group h3 { margin:0 0 .25rem; color:var(--ink); font-size:1rem; }
+    .experience-item { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
+    .experience-item time { color:var(--muted); font-size:.91rem; }
+    .experience-item strong { display:block; color:var(--ink); font-size:.96rem; font-weight:600; }
+    .experience-item span { color:var(--muted); font-size:.91rem; }
     .pub-list { list-style:none; margin:0; padding:0; }
     .pub-list li { display:grid; grid-template-columns:3.8rem minmax(0,1fr); gap:1rem; padding:1rem 0; }
     .year { color:var(--muted); font-size:.91rem; padding-top:.08rem; }
@@ -53,6 +61,7 @@
       .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
       .portrait { width:116px; height:116px; }
       .topic { grid-template-columns:1fr; gap:.15rem; padding:.6rem 0; }
+      .experience-item { grid-template-columns:1fr; gap:0; }
       section { padding:2.1rem 0 2.4rem; }
     }
     @media (max-width:460px) {
@@ -74,6 +83,7 @@
       <a class="brand" href="#top">Hao Yu</a>
       <div class="nav-links">
         <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
         <a href="publications.html">Publications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -94,13 +104,32 @@
       <img class="portrait" src="hao-yu.jpg" width="192" height="192" alt="Portrait of Hao Yu">
     </div>
 
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p class="about">I study how radiation, low-energy electrons, and plasma change DNA and polymers. My work combines chemical assays with X-ray photoelectron spectroscopy to examine damage in molecules and at material surfaces.</p>
+    </section>
+
     <section id="research" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
       <ul class="topics">
-        <li class="topic"><h3>DNA damage and chemical protection</h3><p>I study DNA damage caused by ionizing radiation and atmospheric-pressure plasma, and how the chemical environment and protective compounds alter these effects.</p></li>
-        <li class="topic"><h3>Electron-induced surface chemistry</h3><p>Using XPS, I examine how low-energy electrons change the chemistry of DNA films and fluoropolymer surfaces.</p></li>
-        <li class="topic"><h3>Fluoropolymer decomposition</h3><p>My published work examines how electron-beam irradiation, temperature, and catalysts affect the bulk decomposition of PTFE.</p></li>
+        <li class="topic"><h3>DNA damage and chemical protection</h3><p>I developed a scavenger-free plasmid assay to compare direct and indirect radiation damage. Pulse-radiolysis measurements also showed rutin scavenging radicals and reacting with oxidized dGMP, a model for DNA chemistry.</p></li>
+        <li class="topic"><h3>Electron-induced surface chemistry</h3><p>I use XPS to resolve energy-dependent bond cleavage in DNA films and defluorination at PTFE surfaces exposed to low-energy electrons.</p></li>
+        <li class="topic"><h3>PTFE decomposition</h3><p>My electron-beam studies test how irradiation temperature and a supported Ni catalyst change bulk PTFE decomposition and its products.</p></li>
       </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <!-- homepage-experience:start -->
+      <div class="experience-group"><h3>Appointments</h3>
+        <div class="experience-item" data-record-id="APP-01"><time>Feb 2025 – Present</time><div><strong>Postdoctoral Research Associate</strong><span>University of Notre Dame</span></div></div>
+        <div class="experience-item" data-record-id="APP-02"><time>May 2022 – Jan 2025</time><div><strong>Postdoctoral Researcher</strong><span>National Institutes for Quantum Science and Technology (QST)</span></div></div>
+        <div class="experience-item" data-record-id="APP-03"><time>Apr 2020 – Apr 2022</time><div><strong>Academic Support Staff / Academic Specialist</strong><span>The University of Tokyo</span></div></div>
+      </div>
+      <div class="experience-group"><h3>Education</h3>
+        <div class="experience-item" data-record-id="EDU-01"><time>Apr 2017 – Mar 2020</time><div><strong>Doctor of Engineering (PhD)</strong><span>The University of Tokyo</span></div></div>
+      </div>
+      <!-- homepage-experience:end -->
     </section>
 
     <section id="contact" aria-labelledby="contact-heading">
