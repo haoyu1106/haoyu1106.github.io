@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hao Yu, Postdoctoral Research Associate at the Notre Dame Radiation Laboratory. Research and publications in radiation chemistry, low-energy electrons, plasma, and X-ray photoelectron spectroscopy.">
+  <meta name="color-scheme" content="light">
+  <title>Hao Yu | Research</title>
+  <style>
+    :root { color-scheme: light; --ink:#111; --body:#2a2a2a; --muted:#666; --line:#d5d5d5; --paper:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--body); font:16px/1.58 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; text-underline-offset:.18em; text-decoration-thickness:1px; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible { outline:2px solid var(--ink); outline-offset:4px; border-radius:2px; }
+    .skip { position:absolute; left:-10000px; top:auto; }
+    .skip:focus { left:1rem; top:1rem; z-index:10; background:#fff; padding:.5rem; }
+    .shell { width:min(100% - 48px, 860px); margin-inline:auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { min-height:62px; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+    .brand { color:var(--ink); font-weight:700; font-size:1rem; text-decoration:none; white-space:nowrap; }
+    .nav-links { display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; }
+    .nav-links a { font-size:.88rem; text-decoration:none; color:var(--muted); }
+    .nav-links a:hover, .nav-links a:focus-visible { color:var(--ink); text-decoration:underline; }
+    main { padding-bottom:3rem; }
+    .intro { display:grid; grid-template-columns:minmax(0,1fr) 192px; align-items:center; gap:2.5rem; padding:3.7rem 0 3.6rem; }
+    .portrait { display:block; width:192px; height:192px; object-fit:cover; }
+    h1 { margin:0 0 .8rem; color:var(--ink); font-size:clamp(3rem,7vw,4.1rem); line-height:1.05; letter-spacing:-.052em; font-weight:700; }
+    .role { margin:0; font-size:1.18rem; line-height:1.45; color:var(--ink); }
+    .institution { margin:.25rem 0 0; color:var(--muted); }
+    .profile-links { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; margin-top:1.5rem; }
+    .profile-links a { font-size:.94rem; font-weight:550; }
+    section { border-top:1px solid var(--line); padding:2.4rem 0 2.7rem; }
+    h2 { margin:0 0 1.4rem; color:var(--ink); font-size:1.42rem; line-height:1.2; font-weight:700; letter-spacing:-.025em; }
+    .topics { list-style:none; margin:0; padding:0; }
+    .topic { display:grid; grid-template-columns:minmax(180px,.44fr) minmax(0,1fr); gap:1rem; padding:.75rem 0; }
+    .topic h3 { color:var(--ink); margin:0; font-size:1rem; line-height:1.5; font-weight:650; }
+    .topic p { margin:0; color:var(--muted); font-size:.96rem; line-height:1.55; }
+    .pub-list { list-style:none; margin:0; padding:0; }
+    .pub-list li { display:grid; grid-template-columns:3.8rem minmax(0,1fr); gap:1rem; padding:1rem 0; }
+    .year { color:var(--muted); font-size:.91rem; padding-top:.08rem; }
+    .pub-title { color:var(--ink); font-size:1rem; font-weight:600; line-height:1.48; text-decoration:none; }
+    .pub-title:hover { text-decoration:underline; }
+    .pub-meta { display:block; margin-top:.22rem; color:var(--muted); font-size:.9rem; }
+    .more { display:inline-block; margin-top:1rem; font-weight:600; font-size:.94rem; }
+    .contact-row { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; }
+    footer { border-top:1px solid var(--line); padding:1.2rem 0 1.7rem; color:var(--muted); font-size:.83rem; }
+    footer .shell { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+    @media (max-width:760px) {
+      .shell { width:min(100% - 36px, 860px); }
+      .nav { padding:.85rem 0; flex-wrap:wrap; gap:.35rem 1rem; }
+      .nav-links { gap:.55rem 1.1rem; }
+      .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
+      .portrait { width:116px; height:116px; }
+      .topic { grid-template-columns:1fr; gap:.15rem; padding:.6rem 0; }
+      section { padding:2.1rem 0 2.4rem; }
+    }
+    @media (max-width:460px) {
+      .intro { grid-template-columns:1fr; }
+      .portrait { grid-row:1; width:136px; height:136px; }
+      .pub-list li { grid-template-columns:1fr; gap:.1rem; }
+      .year { padding:0; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { header,.profile-links,.more { display:none; } body { font-size:11pt; } .shell { width:100%; } section { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="#top">Hao Yu</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <a href="Hao_Yu_CV.pdf">CV</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="shell">
+    <div id="top" class="intro">
+      <div>
+        <h1>Hao Yu</h1>
+        <p class="role">Postdoctoral Research Associate</p>
+        <p class="institution">Notre Dame Radiation Laboratory<br>University of Notre Dame</p>
+        <div class="profile-links">
+          <a href="mailto:hyu5@nd.edu">Email</a>
+          <a href="Hao_Yu_CV.pdf">CV</a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=Pq0ifvAAAAAJ">Google Scholar</a>
+          <a href="https://orcid.org/0000-0002-8574-701X">ORCID</a>
+        </div>
+      </div>
+      <img class="portrait" src="hao-yu.jpg" width="192" height="192" alt="Portrait of Hao Yu">
+    </div>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <ul class="topics">
+        <li class="topic"><h3>Low-energy electrons and DNA</h3><p>XPS analysis of electron-induced changes in DNA films and constituents.</p></li>
+        <li class="topic"><h3>Fluoropolymers and radiation</h3><p>PTFE surface chemistry under sub-keV electron irradiation and bulk decomposition under electron-beam irradiation.</p></li>
+        <li class="topic"><h3>Plasma and DNA damage</h3><p>Studies of DNA damage following helium atmospheric-pressure plasma jet irradiation.</p></li>
+      </ul>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Recent publications</h2>
+          <ol class="pub-list">
+            <li><span class="year">2026</span><div><a class="pub-title" href="https://doi.org/10.1063/5.0293271">Energy-Dependent Selective Bond Cleavage Induced by Low-Energy Electrons in DNA Films Deposited from Buffered Solutions: Insights from XPS</a><span class="pub-meta">Hao Yu, Jackson King, Thejaswini Basappa, Sylwia Ptasińska · The Journal of Chemical Physics</span></div></li>
+            <li><span class="year">2026</span><div><a class="pub-title" href="https://doi.org/10.1016/j.apsusc.2026.165988">Surface Chemical Changes of Polytetrafluoroethylene under Sub-keV (10–500 eV) Electron Irradiation: An X-ray Photoelectron Spectroscopy Analysis</a><span class="pub-meta">Hao Yu, Jackson King, Sylwia Ptasińska · Applied Surface Science</span></div></li>
+            <li><span class="year">2025</span><div><a class="pub-title" href="https://doi.org/10.1140/epjd/s10053-025-01068-w">Interaction of 25 eV Electrons with DNA Constituents: XPS Analysis of Calf Thymus DNA, Nucleosides, and Nucleobases</a><span class="pub-meta">João Pereira-da-Silva, Hao Yu, Bo-An Chen, Pitambar Sapkota, Filipe Ferreira da Silva, Sylwia Ptasińska · The European Physical Journal D</span></div></li>
+            <li><span class="year">2025</span><div><a class="pub-title" href="https://doi.org/10.1021/acsomega.4c11623">Cooperative Effects of Ni Catalyst and Radiation on Thermal Decomposition Behavior of Poly(tetrafluoroethylene)</a><span class="pub-meta">Hao Yu, Akira Idesaki, Kimio Yoshimura, Yasunari Maekawa · ACS Omega</span></div></li>
+            <li><span class="year">2025</span><div><a class="pub-title" href="https://doi.org/10.1016/j.radphyschem.2025.113029">Effects of Temperature on the Decomposition of PTFE Induced by Electron Beam Irradiation</a><span class="pub-meta">Hao Yu, Akira Idesaki, Kimio Yoshimura, Yue Zhao, Yasunari Maekawa · Radiation Physics and Chemistry</span></div></li>
+          </ol>
+          <a class="more" href="Hao_Yu_CV.pdf">Full publication list in CV</a>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="contact-row"><a href="mailto:hyu5@nd.edu">hyu5@nd.edu</a><span>Notre Dame Radiation Laboratory, University of Notre Dame</span></div>
+    </section>
+  </main>
+  <footer><div class="shell"><span>Hao Yu</span><span>CV updated September 2026</span></div></footer>
+</body>
+</html>
