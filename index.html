@@ -17,7 +17,8 @@
     .skip { position:absolute; left:-10000px; top:auto; }
     .skip:focus { left:1rem; top:1rem; z-index:10; background:#fff; padding:.5rem; }
     .shell { width:min(100% - 48px, 860px); margin-inline:auto; }
-    header { border-bottom:1px solid var(--line); }
+    header { position:sticky; top:0; z-index:5; background:var(--paper); border-bottom:1px solid var(--line); }
+    [id] { scroll-margin-top:7rem; }
     .nav { min-height:62px; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
     .brand { color:var(--ink); font-weight:700; font-size:1rem; text-decoration:none; white-space:nowrap; }
     .nav-links { display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; }
@@ -30,18 +31,19 @@
     h1 { margin:0 0 .8rem; color:var(--ink); font-size:clamp(3rem,7vw,4.1rem); line-height:1.05; letter-spacing:-.052em; font-weight:700; }
     .role { margin:0; font-size:1.18rem; line-height:1.45; color:var(--ink); }
     .institution { margin:.25rem 0 0; color:var(--muted); }
-    .profile-links { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; margin-top:1.5rem; }
-    .profile-links a { font-size:.94rem; font-weight:550; }
-    .about { max-width:42rem; margin:0; font-size:1.03rem; }
-    section { border-top:1px solid var(--line); padding:2.4rem 0 2.7rem; }
+    .email-contact { margin:1.2rem 0 0; color:var(--ink); }
+    .email-contact a { font-weight:600; }
+    .profile-links { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; margin-top:.6rem; color:var(--muted); }
+    .profile-links a { font-size:.88rem; font-weight:400; }
+    .about { max-width:42rem; margin:0 0 1.4rem; font-size:1.03rem; }
+    section { padding:2.4rem 0 2.7rem; }
     h2 { margin:0 0 1.4rem; color:var(--ink); font-size:1.42rem; line-height:1.2; font-weight:700; letter-spacing:-.025em; }
     .topics { list-style:none; margin:0; padding:0; }
-    .topic { display:grid; grid-template-columns:minmax(180px,.44fr) minmax(0,1fr); gap:1rem; padding:.75rem 0; }
-    .topic-only { display:block; padding:.8rem 0; }
-    .topic-only p { margin-top:.45rem; }
-    .topic-only .research-links { margin-top:.65rem; font-size:.88rem; }
+    .topic { display:block; padding:0 0 1.8rem; }
+    .topic:last-child { padding-bottom:0; }
+    .topic .research-links { margin-top:.65rem; font-size:.88rem; }
     .topic h3 { color:var(--ink); margin:0; font-size:1rem; line-height:1.5; font-weight:650; }
-    .topic p { margin:0; color:var(--muted); font-size:.96rem; line-height:1.55; }
+    .topic p { margin:.45rem 0 0; color:var(--muted); font-size:.96rem; line-height:1.55; }
     .experience-group { margin:0 0 1.35rem; }
     .experience-group:last-child { margin-bottom:0; }
     .experience-group h3 { margin:0 0 .25rem; color:var(--ink); font-size:1rem; }
@@ -49,21 +51,12 @@
     .experience-item time { color:var(--muted); font-size:.91rem; }
     .experience-item strong { display:block; color:var(--ink); font-size:.96rem; font-weight:600; }
     .experience-item span { display:block; color:var(--muted); font-size:.91rem; }
-    .pub-list { list-style:none; margin:0; padding:0; }
-    .pub-list li { display:grid; grid-template-columns:3.8rem minmax(0,1fr); gap:1rem; padding:1rem 0; }
-    .year { color:var(--muted); font-size:.91rem; padding-top:.08rem; }
-    .pub-title { color:var(--ink); font-size:1rem; font-weight:600; line-height:1.48; text-decoration:none; }
-    .pub-title:hover { text-decoration:underline; }
-    .pub-meta { display:block; margin-top:.22rem; color:var(--muted); font-size:.9rem; }
-    footer { border-top:1px solid var(--line); padding:1.2rem 0 1.7rem; color:var(--muted); font-size:.83rem; }
-    footer .shell { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
     @media (max-width:760px) {
       .shell { width:min(100% - 36px, 860px); }
       .nav { padding:.85rem 0; flex-wrap:wrap; gap:.35rem 1rem; }
       .nav-links { gap:.55rem 1.1rem; }
       .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
       .portrait-frame { width:116px; height:116px; }
-      .topic { grid-template-columns:1fr; gap:.15rem; padding:.6rem 0; }
       .experience-item { grid-template-columns:1fr; gap:0; }
       section { padding:2.1rem 0 2.4rem; }
     }
@@ -72,8 +65,6 @@
       .nav-links { width:100%; justify-content:space-between; gap:.4rem; }
       .intro { grid-template-columns:1fr; }
       .portrait-frame { grid-row:1; width:136px; height:136px; }
-      .pub-list li { grid-template-columns:1fr; gap:.1rem; }
-      .year { padding:0; }
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
     @media print { header,.profile-links { display:none; } body { font-size:11pt; } .shell { width:100%; } section { break-inside:avoid; } }
@@ -98,8 +89,8 @@
         <h1>Hao Yu</h1>
         <p class="role">Postdoctoral Research Associate</p>
         <p class="institution">Notre Dame Radiation Laboratory, University of Notre Dame</p>
-        <div id="contact" class="profile-links">
-          <a href="mailto:hyu5@nd.edu">hyu5@nd.edu</a>
+        <p id="contact" class="email-contact">Contact: <a href="mailto:hyu5@nd.edu">hyu5@nd.edu</a></p>
+        <div class="profile-links">
           <a href="https://orcid.org/0000-0002-8574-701X">ORCID</a>
           <a href="https://scholar.google.com/citations?hl=en&amp;user=Pq0ifvAAAAAJ">Google Scholar</a>
           <a href="https://www.researchgate.net/profile/Hao-Yu-216">ResearchGate</a>
@@ -108,17 +99,14 @@
       <div class="portrait-frame"><img class="portrait" src="hao-yu-standard-square.jpg" width="192" height="192" alt="Portrait of Hao Yu"></div>
     </div>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
-      <p class="about">I study how radiation, low-energy electrons, and plasma change DNA and polymers. My work combines chemical assays with X-ray photoelectron spectroscopy to examine damage in molecules and at material surfaces.</p>
-    </section>
+    <p class="about">I study how radiation, low-energy electrons, and plasma change DNA and polymers. My work combines chemical assays with X-ray photoelectron spectroscopy to examine damage in molecules and at material surfaces.</p>
 
     <section id="research" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
       <ul class="topics">
-        <li class="topic topic-only"><h3>DNA damage and chemical protection</h3><p>How do radiation and plasma damage DNA, and how do surrounding molecules influence that damage? My work uses aqueous plasmid DNA to examine damage and the effects of chemical additives.</p><p class="research-links"><a href="https://doi.org/10.1667/RADE-21-00057.1">Plasmid DNA method</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.21203/rs.3.rs-11067747/v1">Amino-acid effects</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1080/10715762.2019.1667991">Rutin radical chemistry</a></p></li>
-        <li class="topic topic-only"><h3>Electron-induced surface chemistry</h3><p>How does electron energy influence chemical changes in DNA and polymer films? I use X-ray photoelectron spectroscopy to examine changes in chemical bonding and surface composition following low-energy electron irradiation.</p><p class="research-links"><a href="https://doi.org/10.1063/5.0293271">DNA films</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.apsusc.2026.165988">PTFE surfaces</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1140/epjd/s10053-025-01068-w">DNA constituents</a></p></li>
-        <li class="topic topic-only"><h3>PTFE decomposition</h3><p>How do irradiation, heat, and catalysts influence the decomposition of PTFE? My work examines changes in thermal stability and decomposition products under different irradiation and heating conditions.</p><p class="research-links"><a href="https://doi.org/10.1021/acsomega.4c11623">Nickel catalyst</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2025.113029">Irradiation temperature</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2023.111435">High-dose irradiation</a></p></li>
+        <li class="topic"><h3>DNA damage and chemical protection</h3><p>My work uses aqueous plasmid DNA to examine damage and the effects of chemical additives.</p><p class="research-links"><a href="https://doi.org/10.1667/RADE-21-00057.1">Plasmid DNA method</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.21203/rs.3.rs-11067747/v1">Amino-acid effects</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1080/10715762.2019.1667991">Rutin radical chemistry</a></p></li>
+        <li class="topic"><h3>Electron-induced surface chemistry</h3><p>I use X-ray photoelectron spectroscopy to examine changes in chemical bonding and surface composition following low-energy electron irradiation.</p><p class="research-links"><a href="https://doi.org/10.1063/5.0293271">DNA films</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.apsusc.2026.165988">PTFE surfaces</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1140/epjd/s10053-025-01068-w">DNA constituents</a></p></li>
+        <li class="topic"><h3>PTFE decomposition</h3><p>My work examines changes in thermal stability and decomposition products under different irradiation and heating conditions.</p><p class="research-links"><a href="https://doi.org/10.1021/acsomega.4c11623">Nickel catalyst</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2025.113029">Irradiation temperature</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2023.111435">High-dose irradiation</a></p></li>
       </ul>
     </section>
 
@@ -141,6 +129,5 @@
 
 
   </main>
-  <footer><div class="shell"><span>Hao Yu</span></div></footer>
 </body>
 </html>
