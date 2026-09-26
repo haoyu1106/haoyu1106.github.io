@@ -37,7 +37,9 @@
     h2 { margin:0 0 1.4rem; color:var(--ink); font-size:1.42rem; line-height:1.2; font-weight:700; letter-spacing:-.025em; }
     .topics { list-style:none; margin:0; padding:0; }
     .topic { display:grid; grid-template-columns:minmax(180px,.44fr) minmax(0,1fr); gap:1rem; padding:.75rem 0; }
-    .topic-only { display:block; padding:.5rem 0; }
+    .topic-only { display:block; padding:.8rem 0; }
+    .topic-only p { margin-top:.45rem; }
+    .topic-only .research-links { margin-top:.65rem; font-size:.88rem; }
     .topic h3 { color:var(--ink); margin:0; font-size:1rem; line-height:1.5; font-weight:650; }
     .topic p { margin:0; color:var(--muted); font-size:.96rem; line-height:1.55; }
     .experience-group { margin:0 0 1.35rem; }
@@ -53,7 +55,6 @@
     .pub-title { color:var(--ink); font-size:1rem; font-weight:600; line-height:1.48; text-decoration:none; }
     .pub-title:hover { text-decoration:underline; }
     .pub-meta { display:block; margin-top:.22rem; color:var(--muted); font-size:.9rem; }
-    .contact-row { display:flex; flex-wrap:wrap; gap:.3rem 1.5rem; }
     footer { border-top:1px solid var(--line); padding:1.2rem 0 1.7rem; color:var(--muted); font-size:.83rem; }
     footer .shell { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
     @media (max-width:760px) {
@@ -97,7 +98,8 @@
         <h1>Hao Yu</h1>
         <p class="role">Postdoctoral Research Associate</p>
         <p class="institution">Notre Dame Radiation Laboratory, University of Notre Dame</p>
-        <div class="profile-links">
+        <div id="contact" class="profile-links">
+          <a href="mailto:hyu5@nd.edu">hyu5@nd.edu</a>
           <a href="https://orcid.org/0000-0002-8574-701X">ORCID</a>
           <a href="https://scholar.google.com/citations?hl=en&amp;user=Pq0ifvAAAAAJ">Google Scholar</a>
           <a href="https://www.researchgate.net/profile/Hao-Yu-216">ResearchGate</a>
@@ -114,9 +116,9 @@
     <section id="research" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
       <ul class="topics">
-        <li class="topic topic-only"><h3>DNA damage and chemical protection</h3></li>
-        <li class="topic topic-only"><h3>Electron-induced surface chemistry</h3></li>
-        <li class="topic topic-only"><h3>PTFE decomposition</h3></li>
+        <li class="topic topic-only"><h3>DNA damage and chemical protection</h3><p>How do radiation and plasma damage DNA, and how do surrounding molecules influence that damage? My work uses aqueous plasmid DNA to examine damage and the effects of chemical additives.</p><p class="research-links"><a href="https://doi.org/10.1667/RADE-21-00057.1">Plasmid DNA method</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.21203/rs.3.rs-11067747/v1">Amino-acid effects</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1080/10715762.2019.1667991">Rutin radical chemistry</a></p></li>
+        <li class="topic topic-only"><h3>Electron-induced surface chemistry</h3><p>How does electron energy influence chemical changes in DNA and polymer films? I use X-ray photoelectron spectroscopy to examine changes in chemical bonding and surface composition following low-energy electron irradiation.</p><p class="research-links"><a href="https://doi.org/10.1063/5.0293271">DNA films</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.apsusc.2026.165988">PTFE surfaces</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1140/epjd/s10053-025-01068-w">DNA constituents</a></p></li>
+        <li class="topic topic-only"><h3>PTFE decomposition</h3><p>How do irradiation, heat, and catalysts influence the decomposition of PTFE? My work examines changes in thermal stability and decomposition products under different irradiation and heating conditions.</p><p class="research-links"><a href="https://doi.org/10.1021/acsomega.4c11623">Nickel catalyst</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2025.113029">Irradiation temperature</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2023.111435">High-dose irradiation</a></p></li>
       </ul>
     </section>
 
@@ -137,11 +139,8 @@
       </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <div class="contact-row"><a href="mailto:hyu5@nd.edu">hyu5@nd.edu</a></div>
-    </section>
+
   </main>
-  <footer><div class="shell"><span>Hao Yu</span><span>Notre Dame Radiation Laboratory, University of Notre Dame</span></div></footer>
+  <footer><div class="shell"><span>Hao Yu</span></div></footer>
 </body>
 </html>
