@@ -67,7 +67,8 @@
     .pub-title:hover { text-decoration:underline; }
     .note { color:var(--muted); margin:0 0 .6rem; font-size:.9rem; }
     .all-pubs { margin:1rem 0 0; font-weight:600; }
-    .talks { list-style:none; margin:0; padding:0; }
+    .talks, .plain { list-style:none; margin:0; padding:0; }
+    .plain li { padding:.55rem 0; font-size:1.03rem; }
     .talks li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
     .talks .when { color:var(--muted); font-size:1rem; }
     .talks li > div { font-size:1.03rem; }
@@ -152,7 +153,7 @@
 
     <section id="awards" aria-labelledby="awards-heading">
       <h2 id="awards-heading">Awards</h2>
-      <ul class="talks">
+      <ul class="plain">
         <li>R&amp;D Achievement Award, Takasaki Institute for Advanced Quantum Science (QST), Japan, March 2026.</li>
         <li>Excellent Poster Presentation Award, QST Takasaki Science Festival 2023, December 2023.</li>
         <li>Excellent Presentation Award for Young Researchers, 63rd Symposium on Radiation Chemistry, Japan Society of Radiation Chemistry, December 2020.</li>
