@@ -67,6 +67,9 @@
     .pub-title:hover { text-decoration:underline; }
     .note { color:var(--muted); margin:0 0 .6rem; font-size:.9rem; }
     .all-pubs { margin:1rem 0 0; font-weight:600; }
+    .talks { list-style:none; margin:0; padding:0; }
+    .talks li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
+    .talks .when { color:var(--muted); font-size:.91rem; }
     .foot { padding:1.5rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
     .experience-group { margin:0 0 1.35rem; }
     .experience-group:last-child { margin-bottom:0; }
@@ -81,14 +84,15 @@
       .nav-links { gap:.55rem 1.1rem; }
       .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
       .portrait-frame { width:116px; height:116px; }
-      .experience-item { grid-template-columns:1fr; gap:0; }
+      .experience-item, .talks li { grid-template-columns:1fr; gap:0; }
       section { padding:2.1rem 0 2.4rem; }
     }
     @media (max-width:460px) {
       .nav { align-items:flex-start; flex-direction:column; gap:.35rem; }
       .nav-links { width:100%; justify-content:space-between; gap:.4rem; }
-      .intro { grid-template-columns:1fr; }
-      .portrait-frame { grid-row:1; width:136px; height:136px; }
+      .intro { grid-template-columns:minmax(0,1fr) 88px; gap:.9rem; padding:1.8rem 0 2rem; align-items:start; }
+      .portrait-frame { width:88px; height:88px; }
+      h1 { font-size:2.6rem; }
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
     @media print { header,.profile-links { display:none; } body { font-size:11pt; } .shell { width:100%; } section { break-inside:avoid; } }
@@ -131,6 +135,15 @@
         <li class="topic"><h3>DNA damage and chemical protection</h3><p>My work uses aqueous plasmid DNA to examine damage and the effects of chemical additives.</p><p class="research-links"><a href="https://doi.org/10.1667/RADE-21-00057.1">Plasmid DNA method</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.21203/rs.3.rs-11067747/v1">Amino-acid effects</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1080/10715762.2019.1667991">Rutin radical chemistry</a></p></li>
         <li class="topic"><h3>Electron-induced surface chemistry</h3><p>I use X-ray photoelectron spectroscopy to examine changes in chemical bonding and surface composition following low-energy electron irradiation.</p><p class="research-links"><a href="https://doi.org/10.1063/5.0293271">DNA films</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.apsusc.2026.165988">PTFE surfaces</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1140/epjd/s10053-025-01068-w">DNA constituents</a></p></li>
         <li class="topic"><h3>PTFE decomposition</h3><p>My work examines changes in thermal stability and decomposition products under different irradiation and heating conditions.</p><p class="research-links"><a href="https://doi.org/10.1021/acsomega.4c11623">Nickel catalyst</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2025.113029">Irradiation temperature</a> <span aria-hidden="true">·</span> <a href="https://doi.org/10.1016/j.radphyschem.2023.111435">High-dose irradiation</a></p></li>
+      </ul>
+    </section>
+
+    <section id="talks" aria-labelledby="talks-heading">
+      <h2 id="talks-heading">Talks</h2>
+      <ul class="talks">
+        <li><span class="when">Nov 13, 2026</span><div>&ldquo;Separating Radical-Driven and pH-Dependent Pathways in Low-Temperature Plasma-Induced DNA Damage.&rdquo; AVS 72nd International Symposium &amp; Exhibition, Pittsburgh, PA. Accepted oral presentation.</div></li>
+        <li><span class="when">Oct 2025</span><div>&ldquo;XPS Analysis of DNA Damage Induced by Low-Energy Electrons (1&ndash;25 eV): Site and Energy Dependence.&rdquo; Midwest Regional Meeting of the American Chemical Society, Columbia, MO. Oral presentation.</div></li>
+        <li><span class="when">Sep 2025</span><div>&ldquo;Application of XPS to Detect Low-Energy Electron (1&ndash;25 eV) Irradiation-Induced DNA Degradation.&rdquo; AVS 71st International Symposium and Exhibition, Charlotte, NC. Oral presentation.</div></li>
       </ul>
     </section>
 
