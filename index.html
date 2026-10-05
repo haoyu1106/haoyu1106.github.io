@@ -68,7 +68,8 @@
     .note { color:var(--muted); margin:0 0 .6rem; font-size:.9rem; }
     .all-pubs { margin:1rem 0 0; font-weight:600; }
     .talks { list-style:none; margin:0; padding:0; }
-    .talks li { padding:.55rem 0; }
+    .talks li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
+    .talks .when { color:var(--muted); font-size:.91rem; }
     .foot { padding:1.5rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
     .experience-group { margin:0 0 1.35rem; }
     .experience-group:last-child { margin-bottom:0; }
@@ -83,7 +84,7 @@
       .nav-links { gap:.55rem 1.1rem; }
       .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
       .portrait-frame { width:116px; height:116px; }
-      .experience-item { grid-template-columns:1fr; gap:0; }
+      .experience-item, .talks li { grid-template-columns:1fr; gap:0; }
       section { padding:2.1rem 0 2.4rem; }
     }
     @media (max-width:460px) {
@@ -140,9 +141,9 @@
     <section id="talks" aria-labelledby="talks-heading">
       <h2 id="talks-heading">Talks</h2>
       <ul class="talks">
-        <li>&ldquo;Separating Radical-Driven and pH-Dependent Pathways in Low-Temperature Plasma-Induced DNA Damage.&rdquo; AVS 72nd International Symposium &amp; Exhibition, Pittsburgh, PA. Accepted oral presentation.</li>
-        <li>&ldquo;XPS Analysis of DNA Damage Induced by Low-Energy Electrons (1&ndash;25 eV): Site and Energy Dependence.&rdquo; Midwest Regional Meeting of the American Chemical Society, Columbia, MO. Oral presentation.</li>
-        <li>&ldquo;Application of XPS to Detect Low-Energy Electron (1&ndash;25 eV) Irradiation-Induced DNA Degradation.&rdquo; AVS 71st International Symposium and Exhibition, Charlotte, NC. Oral presentation.</li>
+        <li><span class="when">Nov 2026</span><div>&ldquo;Separating Radical-Driven and pH-Dependent Pathways in Low-Temperature Plasma-Induced DNA Damage.&rdquo; AVS 72nd International Symposium &amp; Exhibition, Pittsburgh, PA. Accepted oral presentation.</div></li>
+        <li><span class="when">Oct 2025</span><div>&ldquo;XPS Analysis of DNA Damage Induced by Low-Energy Electrons (1&ndash;25 eV): Site and Energy Dependence.&rdquo; Midwest Regional Meeting of the American Chemical Society, Columbia, MO. Oral presentation.</div></li>
+        <li><span class="when">Sep 2025</span><div>&ldquo;Application of XPS to Detect Low-Energy Electron (1&ndash;25 eV) Irradiation-Induced DNA Degradation.&rdquo; AVS 71st International Symposium and Exhibition, Charlotte, NC. Oral presentation.</div></li>
       </ul>
     </section>
 
