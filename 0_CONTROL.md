@@ -15,6 +15,9 @@ Reader: Hao and the site maintainer. Owner: the personal homepage maintainer.
 The authoritative content and maintenance contract is
 `/Users/hao/OneDrive/01_Work/71_Record/HOMEPAGE_CONTRACT.md`.
 Facts and Hao-approved wording stay in the Record named by that contract.
+For research illustrations, follow `/Users/hao/OneDrive/01_Work/71_Record/0_CONTROL.md`
+section "Public homepage profile". It routes to the existing PPT/Keynote asset catalog and
+Schematic Library before any image selection or creation.
 The public CV follows the CV controller's Public CV rule.
 Routine personal-homepage maintenance and publication use Hao's existing standing grant.
 
