@@ -68,7 +68,8 @@
     .note { color:var(--muted); margin:0 0 .6rem; font-size:.9rem; }
     .all-pubs { margin:1rem 0 0; font-weight:600; }
     .talks, .plain { list-style:none; margin:0; padding:0; }
-    .plain li { padding:.55rem 0; font-size:1.03rem; }
+    .plain li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; font-size:1.03rem; }
+    .plain .when { color:var(--muted); font-size:1rem; }
     .talks li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
     .talks .when { color:var(--muted); font-size:1rem; }
     .talks li > div { font-size:1.03rem; }
@@ -86,7 +87,7 @@
       .nav-links { gap:.55rem 1.1rem; }
       .intro { grid-template-columns:minmax(0,1fr) 116px; gap:1.2rem; padding:2.8rem 0; }
       .portrait-frame { width:116px; height:116px; }
-      .experience-item, .talks li { grid-template-columns:1fr; gap:0; }
+      .experience-item, .talks li, .plain li { grid-template-columns:1fr; gap:0; }
       section { padding:1.8rem 0 2rem; }
     }
     @media (max-width:460px) {
@@ -154,9 +155,9 @@
     <section id="awards" aria-labelledby="awards-heading">
       <h2 id="awards-heading">Awards</h2>
       <ul class="plain">
-        <li>R&amp;D Achievement Award, Takasaki Institute for Advanced Quantum Science (QST), Japan, March 2026.</li>
-        <li>Excellent Poster Presentation Award, QST Takasaki Science Festival 2023, December 2023.</li>
-        <li>Excellent Presentation Award for Young Researchers, 63rd Symposium on Radiation Chemistry, Japan Society of Radiation Chemistry, December 2020.</li>
+        <li><span class="when">Mar 2026</span> <div>R&amp;D Achievement Award, Takasaki Institute for Advanced Quantum Science (QST), Japan.</div></li>
+        <li><span class="when">Dec 2023</span> <div>Excellent Poster Presentation Award, QST Takasaki Science Festival 2023.</div></li>
+        <li><span class="when">Dec 2020</span> <div>Excellent Presentation Award for Young Researchers, 63rd Symposium on Radiation Chemistry, Japan Society of Radiation Chemistry.</div></li>
       </ul>
     </section>
 
@@ -171,9 +172,9 @@
         <div class="experience-item" data-record-id="APP-04"><time>Apr 2018 – Mar 2020</time><div><strong>Research Fellowship for Young Scientists (DC2)</strong><span>Japan Society for the Promotion of Science (JSPS), Japan</span></div></div>
       </div>
       <div class="experience-group"><h3>Education</h3>
-        <div class="experience-item" data-record-id="EDU-01"><time>2020</time><div><strong>Doctor of Engineering (PhD)</strong><span>The University of Tokyo, Japan</span><span>Advisers: Prof. Shinichi Yamashita and Prof. Mitsuru Uesaka</span></div></div>
-        <div class="experience-item" data-record-id="EDU-02"><time>2017</time><div><strong>Master of Engineering (MEng)</strong><span>The University of Tokyo, Japan</span><span>Advisers: Prof. Shinichi Yamashita and Prof. Mitsuru Uesaka</span></div></div>
-        <div class="experience-item" data-record-id="EDU-03"><time>2015</time><div><strong>Bachelor of Engineering (BE)</strong><span>Chiba University, Japan</span><span>Adviser: Prof. Wenwei Yu</span></div></div>
+        <div class="experience-item" data-record-id="EDU-01"><time>Mar 2020</time><div><strong>Doctor of Engineering (PhD)</strong><span>The University of Tokyo, Japan</span><span>Advisers: Prof. Shinichi Yamashita and Prof. Mitsuru Uesaka</span></div></div>
+        <div class="experience-item" data-record-id="EDU-02"><time>Mar 2017</time><div><strong>Master of Engineering (MEng)</strong><span>The University of Tokyo, Japan</span><span>Advisers: Prof. Shinichi Yamashita and Prof. Mitsuru Uesaka</span></div></div>
+        <div class="experience-item" data-record-id="EDU-03"><time>Mar 2015</time><div><strong>Bachelor of Engineering (BE)</strong><span>Chiba University, Japan</span><span>Adviser: Prof. Wenwei Yu</span></div></div>
       </div>
     </section>
 
