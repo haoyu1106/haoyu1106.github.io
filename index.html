@@ -68,19 +68,17 @@
     .note { color:var(--muted); margin:0 0 .6rem; font-size:.9rem; }
     .all-pubs { margin:1rem 0 0; font-weight:600; }
     .talks, .plain { list-style:none; margin:0; padding:0; }
-    .plain li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; font-size:1.03rem; }
-    .plain .when { color:var(--muted); font-size:1rem; }
+    .plain li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; font-size:1rem; }
     .talks li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
-    .talks .when { color:var(--muted); font-size:1rem; }
-    .talks li > div { font-size:1.03rem; }
+    .talks .when, .plain .when, .experience-item time { color:var(--muted); font-size:1rem; }
+    .talks li > div { font-size:1rem; }
     .foot { padding:1.5rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
     .experience-group { margin:0 0 1.35rem; }
     .experience-group:last-child { margin-bottom:0; }
     .experience-group h3 { margin:0 0 .25rem; color:var(--ink); font-size:1rem; }
     .experience-item { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:1rem; padding:.55rem 0; }
-    .experience-item time { color:var(--muted); font-size:.91rem; }
-    .experience-item strong { display:block; color:var(--ink); font-size:.96rem; font-weight:600; }
-    .experience-item span { display:block; color:var(--muted); font-size:.91rem; }
+    .experience-item strong { display:block; color:var(--ink); font-size:1rem; font-weight:600; }
+    .experience-item span { display:block; color:var(--muted); font-size:1rem; }
     @media (max-width:760px) {
       .shell { width:min(100% - 36px, 860px); }
       .nav { padding:.85rem 0; flex-wrap:wrap; gap:.35rem 1rem; }
